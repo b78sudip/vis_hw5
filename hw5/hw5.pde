@@ -1,11 +1,16 @@
 PImage img;
 
 void setup() {
-  size(400, 533);
-  img = loadImage("image.jpg");
+  size(400, 530);
+  img = loadImage("image.jpg");  
 }
 
 void draw() {
-  drawImage(); 
+  drawImage();
+  if (sliderPosition < img.height/2) {
+    increaseBrightness();
+  } else {
+  decreaseBrightness();
+  }
   drawSlider();
 }
